@@ -1,0 +1,15 @@
+{
+  "name": "larne",
+  "version": "0.1.0",
+  "description": "Larne — visual, Scientific authoring for LaTeX",
+  "main": "src/main/main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "Continuum Science Labs",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^30.0.0",
+    "monaco-editor": "^0.49.0"
+  }
+}

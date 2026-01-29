@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Larne</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="toolbar">
+    <button id="openBtn">Open .tex</button>
+    <button id="saveBtn" disabled>Save</button>
+    <span id="status">No file opened</span>
+  </div>
+
+  <div id="app">
+    <div id="editor"></div>
+    <div id="preview">PDF Preview (coming next)</div>
+  </div>
+
+  <!-- Preserve Node's require before Monaco overwrites window.require -->
+  <script>
+    window.nodeRequire = require;      // keep Node require
+    window.nodeProcess = process;
+    window.nodeModule = module;
+  </script>
+
+  <!-- Monaco AMD loader config -->
+  <script>
+    // Monaco expects window.require to be an AMD loader config object
+    window.require = {
+      paths: { vs: "https://cdn.jsdelivr.net/npm/monaco-editor@0.49.0/min/vs" }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/monaco-editor@0.49.0/min/vs/loader.js"></script>
+
+  <script src="renderer.js"></script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: system-ui, sans-serif;
+}
+
+#toolbar {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  padding: 8px 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+#status {
+  margin-left: 8px;
+  color: #444;
+  font-size: 14px;
+}
+
+#app {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: calc(100% - 42px);
+}
+
+#editor {
+  border-right: 1px solid #ddd;
+}
+
+#preview {
+  padding: 10px;
+}
